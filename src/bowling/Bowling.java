@@ -1,8 +1,13 @@
 package bowling;
 
-public class Bowling {
-    public void roll(int pin) {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Bowling {
+    List<Integer> rolls = new ArrayList<>();
+
+    public void roll(int pins) {
+        rolls.add(pins);
     }
 
     public int score() {
