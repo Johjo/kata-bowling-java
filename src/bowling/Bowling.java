@@ -22,7 +22,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -35,7 +35,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -48,7 +48,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -61,7 +61,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -74,7 +74,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -87,7 +87,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -100,7 +100,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -112,7 +112,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -125,7 +125,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -137,7 +137,7 @@ public class Bowling {
         if (isStrike(frameIndex)) {
             bonus = rolls.get(frameIndex + 1);
             bonus += rolls.get(frameIndex + 2);
-        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        }else if (isSpare(frameIndex))
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -146,7 +146,14 @@ public class Bowling {
         return score;
     }
 
+    private boolean isSpare(int frameIndex) {
+        return rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10;
+    }
+
     private boolean isStrike(int frameIndex) {
         return rolls.get(frameIndex) == 10;
     }
 }
+
+
+
