@@ -1,4 +1,5 @@
 import bowling.Bowling;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class TestBowling {
@@ -28,10 +29,7 @@ public class TestBowling {
         game.roll(8);
         game.roll(1);
 
-
-
-
-
+        Assert.assertEquals(117, game.score());
     }
 
 }
