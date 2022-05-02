@@ -14,50 +14,50 @@ public class Bowling {
         int score = 0;
 
         // frame 1
-        score += 3; // roll 1
-        score += 4; // roll 2
+        score += rolls.get(0); // roll 1
+        score += rolls.get(1); // roll 2
 
         // frame 2
-        score += 6; // roll 3
-        score += 3; // roll 4
+        score += rolls.get(2); // roll 3
+        score += rolls.get(3); // roll 4
 
         // frame 3
-        score += 2; // roll 5
-        score += 8; // roll 6 (spare)
-        score += 4; // roll 7 (spare bonus)
+        score += rolls.get(4); // roll 5
+        score += rolls.get(5); // roll 6 (spare)
+        score += rolls.get(6); // roll 7 (spare bonus)
 
         // frame 4
-        score += 4; // roll 7
-        score += 3; // roll 8
+        score += rolls.get(6); // roll 7
+        score += rolls.get(7); // roll 8
 
         // frame 5
-        score += 4; // roll 9
-        score += 4; // roll 10
+        score += rolls.get(8); // roll 9
+        score += rolls.get(9); // roll 10
 
         // frame 6
-        score += 5; // roll 11
-        score += 2; // roll 12
+        score += rolls.get(10); // roll 11
+        score += rolls.get(11); // roll 12
 
         // frame 7
-        score += 6; // roll 13
-        score += 4; // roll 14
-        score += 10; // roll 15
+        score += rolls.get(12); // roll 13
+        score += rolls.get(13); // roll 14
+        score += rolls.get(14); // roll 15
 
         // frame 8
-        score += 10; // roll 15 (strike)
-        score += 8; // roll 16 (strike bonus)
-        score += 0; // roll 17 (strike bonus)
+        score += rolls.get(14); // roll 15 (strike)
+        score += rolls.get(15); // roll 16 (strike bonus)
+        score += rolls.get(16); // roll 17 (strike bonus)
 
 
         // frame 9
-        score += 8; // roll 16
-        score += 0; // roll 17
+        score += rolls.get(15); // roll 16
+        score += rolls.get(16); // roll 17
 
 
         // frame 10
-        score += 10; // roll 18 (strike)
-        score += 8; // roll 19 (strike bonus)
-        score += 1; // roll 20 (strike bonus)
+        score += rolls.get(17); // roll 18 (strike)
+        score += rolls.get(18); // roll 19 (strike bonus)
+        score += rolls.get(19); // roll 20 (strike bonus)
 
         return score;
     }
