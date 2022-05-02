@@ -19,7 +19,10 @@ public class Bowling {
         frameIndex = 0;
         score += rolls.get(frameIndex); // roll 1
         score += rolls.get(frameIndex + 1); // roll 2
-        if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -29,7 +32,10 @@ public class Bowling {
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 3
         score += rolls.get(frameIndex + 1); // roll 4
-        if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -39,7 +45,10 @@ public class Bowling {
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 5
         score += rolls.get(frameIndex + 1); // roll 6 (spare)
-        if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -49,7 +58,10 @@ public class Bowling {
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 7
         score += rolls.get(frameIndex + 1); // roll 8
-        if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -59,7 +71,10 @@ public class Bowling {
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 9
         score += rolls.get(frameIndex + 1); // roll 10
-        if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -69,7 +84,10 @@ public class Bowling {
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 11
         score += rolls.get(frameIndex + 1); // roll 12
-        if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -79,7 +97,10 @@ public class Bowling {
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 13
         score += rolls.get(frameIndex + 1); // roll 14 (spare)
-        if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -88,15 +109,23 @@ public class Bowling {
         // frame 8
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 15 (strike)
-        bonus = rolls.get(frameIndex + 1); // roll 16 (strike bonus)
-        bonus += rolls.get(frameIndex + 2); // roll 17 (strike bonus)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+            bonus = rolls.get(frameIndex + 2);
+        else
+            bonus = 0;
         score += bonus;
 
         // frame 9
         frameIndex = frameIndex + 1;
         score += rolls.get(frameIndex); // roll 16
         score += rolls.get(frameIndex + 1); // roll 17
-        if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
             bonus = rolls.get(frameIndex + 2);
         else
             bonus = 0;
@@ -105,8 +134,13 @@ public class Bowling {
         // frame 10
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 18 (strike)
-        bonus = rolls.get(frameIndex + 1); // roll 19 (strike bonus)
-        bonus += rolls.get(frameIndex + 2); // roll 20 (strike bonus)
+        if (rolls.get(frameIndex) == 10) {
+            bonus = rolls.get(frameIndex + 1);
+            bonus += rolls.get(frameIndex + 2);
+        }else if (rolls.get(frameIndex) + rolls.get(frameIndex + 1) == 10)
+            bonus = rolls.get(frameIndex + 2);
+        else
+            bonus = 0;
         score += bonus;
 
         return score;
