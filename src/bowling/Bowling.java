@@ -15,12 +15,10 @@ public class Bowling {
     public int score() {
         int score = 0;
         int frameIndex = 0;
-        int frameScore = 0;
-        int bonus = 0;
 
         for (int frame = 0; frame < 10; frame++) {
-            frameScore = calculateFrameScore(frameIndex);
-            bonus = calculateBonus(frameIndex);
+            int frameScore = calculateFrameScore(frameIndex);
+            int bonus = calculateBonus(frameIndex);
             score += frameScore + bonus;
             frameIndex = nextFrame(frameIndex);
         }
