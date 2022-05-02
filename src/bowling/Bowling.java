@@ -18,65 +18,13 @@ public class Bowling {
         int frameScore = 0;
         int bonus = 0;
 
-        // frame 1
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
+        for (int frame = 0; frame < 10; frame++) {
+            frameScore = calculateFrameScore(frameIndex);
+            bonus = calculateBonus(frameIndex);
+            score += frameScore + bonus;
+            frameIndex = nextFrame(frameIndex);
+        }
 
-        // frame 2
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
-
-        // frame 3
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
-
-        // frame 4
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
-
-        // frame 5
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
-
-        // frame 6
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
-
-        // frame 7
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
-
-        // frame 8
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
-
-        // frame 9
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
-
-        // frame 10
-        frameScore = calculateFrameScore(frameIndex);
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-        frameIndex = nextFrame(frameIndex);
 
         return score;
     }
