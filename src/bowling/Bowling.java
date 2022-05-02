@@ -1,7 +1,5 @@
 package bowling;
 
-import org.hamcrest.core.Is;
-
 import java.util.ArrayList;
 import java.util.List;
 
