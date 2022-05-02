@@ -6,7 +6,33 @@ public class Bowling {
     }
 
     public int score() {
-        int score = 3 + 4 + 6 + 3 + 2 + 8 + 4 + 4 + 3 + 4 + 4 + 5 + 2 + 6 + 4 + 10 + 10 + 8 + 0 + 8 + 0 + 10 + 8 + 1;
+        int score = 0;
+
+        score += 3;
+        score += 4;
+        score += 6;
+        score += 3;
+        score += 2;
+        score += 8;
+        score += 4;
+        score += 4;
+        score += 3;
+        score += 4;
+        score += 4;
+        score += 5;
+        score += 2;
+        score += 6;
+        score += 4;
+        score += 10;
+        score += 10;
+        score += 8;
+        score += 0;
+        score += 8;
+        score += 0;
+        score += 10;
+        score += 8;
+        score += 1;
+
         return score;
     }
 }
