@@ -19,7 +19,6 @@ public class Bowling {
         int bonus = 0;
 
         // frame 1
-        frameIndex = 0;
         frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
@@ -77,6 +76,7 @@ public class Bowling {
         frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
+        frameIndex = nextFrame(frameIndex);
 
         return score;
     }
