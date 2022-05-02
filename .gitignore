@@ -3,3 +3,5 @@
 /.idea/modules.xml
 /.idea/vcs.xml
 /bowling.iml
+*.class
+/.idea/uiDesigner.xml
