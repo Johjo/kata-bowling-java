@@ -17,9 +17,7 @@ public class Bowling {
         int frameIndex = 0;
 
         for (int frame = 0; frame < 10; frame++) {
-            int frameScore = calculateFrameScore(frameIndex);
-            int bonus = calculateBonus(frameIndex);
-            score += frameScore + bonus;
+            score += calculateFrameScore(frameIndex) + calculateBonus(frameIndex);
             frameIndex = nextFrame(frameIndex);
         }
 
