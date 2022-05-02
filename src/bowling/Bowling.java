@@ -13,6 +13,7 @@ public class Bowling {
     public int score() {
         int score = 0;
         int frameIndex = 0;
+        int bonus = 0;
 
         // frame 1
         frameIndex = 0;
@@ -28,7 +29,8 @@ public class Bowling {
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 5
         score += rolls.get(frameIndex + 1); // roll 6 (spare)
-        score += rolls.get(frameIndex + 2); // roll 7 (spare bonus)
+        bonus = rolls.get(frameIndex + 2); // roll 7 (spare bonus)
+        score += bonus;
 
         // frame 4
         frameIndex = frameIndex + 2;
@@ -48,15 +50,17 @@ public class Bowling {
         // frame 7
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 13
-        score += rolls.get(frameIndex + 1); // roll 14
-        score += rolls.get(frameIndex + 2); // roll 15
+        score += rolls.get(frameIndex + 1); // roll 14 (spare)
+        bonus = rolls.get(frameIndex + 2); // roll 15 (spare bonus)
+        score += bonus;
 
         // frame 8
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 15 (strike)
-        score += rolls.get(frameIndex + 1); // roll 16 (strike bonus)
-        score += rolls.get(frameIndex + 2); // roll 17 (strike bonus)
 
+        bonus = rolls.get(frameIndex + 1); // roll 16 (strike bonus)
+        bonus += rolls.get(frameIndex + 2); // roll 17 (strike bonus)
+        score += bonus;
 
         // frame 9
         frameIndex = frameIndex + 1;
@@ -67,8 +71,9 @@ public class Bowling {
         // frame 10
         frameIndex = frameIndex + 2;
         score += rolls.get(frameIndex); // roll 18 (strike)
-        score += rolls.get(frameIndex + 1); // roll 19 (strike bonus)
-        score += rolls.get(frameIndex + 2); // roll 20 (strike bonus)
+        bonus = rolls.get(frameIndex + 1); // roll 19 (strike bonus)
+        bonus += rolls.get(frameIndex + 2); // roll 20 (strike bonus)
+        score += bonus;
 
         return score;
     }
