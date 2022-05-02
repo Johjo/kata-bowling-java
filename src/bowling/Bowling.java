@@ -20,115 +20,76 @@ public class Bowling {
 
         // frame 1
         frameIndex = 0;
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 2
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 3
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 4
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 5
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 6
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 7
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 8
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 9
-        if (isStrike(frameIndex))
-            frameScore = rolls.get(frameIndex);
-        else {
-            frameScore = rolls.get(frameIndex);
-            frameScore += rolls.get(frameIndex + 1);
-        }
+        frameScore = calculateFrameScore(frameIndex);
         bonus = calculateBonus(frameIndex);
         score += frameScore + bonus;
         frameIndex = nextFrame(frameIndex);
 
         // frame 10
+        frameScore = calculateFrameScore(frameIndex);
+        bonus = calculateBonus(frameIndex);
+        score += frameScore + bonus;
+
+        return score;
+    }
+
+    private int calculateFrameScore(int frameIndex) {
+        int frameScore;
         if (isStrike(frameIndex))
             frameScore = rolls.get(frameIndex);
         else {
             frameScore = rolls.get(frameIndex);
             frameScore += rolls.get(frameIndex + 1);
         }
-        bonus = calculateBonus(frameIndex);
-        score += frameScore + bonus;
-
-        return score;
+        return frameScore;
     }
 
     private int nextFrame(int frameIndex) {
